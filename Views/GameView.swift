@@ -20,15 +20,19 @@ struct GameView: View {
     
     var body: some View {
             VStack {
-                List {
-                    ForEach(game.holes.indices, id: \.self) { index in
-                        HoleView(index: index + 1, hole: game.holes[index], executeAction: {
-                            viewModel.holeIndex = index
-                            viewModel.showEditHoleView = true
-                        })
+                if game.holes.isEmpty {
+                    Text("Click + in the Top Right to Add a Hole")
+                } else {
+                    List {
+                        ForEach(game.holes.indices, id: \.self) { index in
+                            HoleView(index: index + 1, hole: game.holes[index], executeAction: {
+                                viewModel.holeIndex = index
+                                viewModel.showEditHoleView = true
+                            })
+                        }
                     }
+                    Text("Green in Regulation: " + String(viewModel.greenPercentage(game: game)) + "%")
                 }
-                Text("Green in Regulation: " + String(viewModel.greenPercentage(game: game)) + "%")
             }
             .navigationTitle(game.title)
             .toolbar {
