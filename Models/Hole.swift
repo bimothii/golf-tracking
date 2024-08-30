@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Hole: Codable, Identifiable {
+    let id: String
+    let par: Int
+    let strokes: Int
+    let putts: Int
+}

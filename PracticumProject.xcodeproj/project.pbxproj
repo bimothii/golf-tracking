@@ -11,6 +11,36 @@
 		D31639DA2C7622E60069F938 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31639D92C7622E60069F938 /* ContentView.swift */; };
 		D31639DC2C7622E70069F938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31639DB2C7622E70069F938 /* Assets.xcassets */; };
 		D31639DF2C7622E70069F938 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31639DE2C7622E70069F938 /* Preview Assets.xcassets */; };
+		D38C9BC22C8223C4004D9000 /* AddHoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA52C8223C4004D9000 /* AddHoleViewModel.swift */; };
+		D38C9BC32C8223C4004D9000 /* EditGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA62C8223C4004D9000 /* EditGameViewModel.swift */; };
+		D38C9BC42C8223C4004D9000 /* EditHoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA72C8223C4004D9000 /* EditHoleViewModel.swift */; };
+		D38C9BC52C8223C4004D9000 /* GamesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA82C8223C4004D9000 /* GamesListViewModel.swift */; };
+		D38C9BC62C8223C4004D9000 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA92C8223C4004D9000 /* GameViewModel.swift */; };
+		D38C9BC72C8223C4004D9000 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAA2C8223C4004D9000 /* LoginViewModel.swift */; };
+		D38C9BC82C8223C4004D9000 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAB2C8223C4004D9000 /* MainViewModel.swift */; };
+		D38C9BC92C8223C4004D9000 /* NewGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAC2C8223C4004D9000 /* NewGameViewModel.swift */; };
+		D38C9BCA2C8223C4004D9000 /* NewHoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAD2C8223C4004D9000 /* NewHoleViewModel.swift */; };
+		D38C9BCB2C8223C4004D9000 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAE2C8223C4004D9000 /* ProfileViewModel.swift */; };
+		D38C9BCC2C8223C4004D9000 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAF2C8223C4004D9000 /* RegisterViewModel.swift */; };
+		D38C9BCD2C8223C4004D9000 /* AddHoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB12C8223C4004D9000 /* AddHoleView.swift */; };
+		D38C9BCE2C8223C4004D9000 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB22C8223C4004D9000 /* CustomButton.swift */; };
+		D38C9BCF2C8223C4004D9000 /* EditGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB32C8223C4004D9000 /* EditGameView.swift */; };
+		D38C9BD02C8223C4004D9000 /* EditHoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB42C8223C4004D9000 /* EditHoleView.swift */; };
+		D38C9BD12C8223C4004D9000 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB52C8223C4004D9000 /* GamesListView.swift */; };
+		D38C9BD22C8223C4004D9000 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB62C8223C4004D9000 /* GameView.swift */; };
+		D38C9BD32C8223C4004D9000 /* HoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB72C8223C4004D9000 /* HoleView.swift */; };
+		D38C9BD42C8223C4004D9000 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB82C8223C4004D9000 /* LoginView.swift */; };
+		D38C9BD52C8223C4004D9000 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB92C8223C4004D9000 /* MainView.swift */; };
+		D38C9BD62C8223C4004D9000 /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BBA2C8223C4004D9000 /* NewGameView.swift */; };
+		D38C9BD72C8223C4004D9000 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BBB2C8223C4004D9000 /* ProfileView.swift */; };
+		D38C9BD82C8223C4004D9000 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BBC2C8223C4004D9000 /* RegisterView.swift */; };
+		D38C9BD92C8223C4004D9000 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BBE2C8223C4004D9000 /* Game.swift */; };
+		D38C9BDA2C8223C4004D9000 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BBF2C8223C4004D9000 /* Hole.swift */; };
+		D38C9BDB2C8223C4004D9000 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BC02C8223C4004D9000 /* User.swift */; };
+		D38C9BDE2C8223FC004D9000 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D38C9BDD2C8223FC004D9000 /* FirebaseAuth */; };
+		D38C9BE02C8223FC004D9000 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D38C9BDF2C8223FC004D9000 /* FirebaseFirestore */; };
+		D38C9BE22C822469004D9000 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BE12C822469004D9000 /* Extensions.swift */; };
+		D38C9BE42C822472004D9000 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D38C9BE32C822472004D9000 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +49,34 @@
 		D31639D92C7622E60069F938 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D31639DB2C7622E70069F938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D31639DE2C7622E70069F938 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D38C9BA52C8223C4004D9000 /* AddHoleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHoleViewModel.swift; sourceTree = "<group>"; };
+		D38C9BA62C8223C4004D9000 /* EditGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGameViewModel.swift; sourceTree = "<group>"; };
+		D38C9BA72C8223C4004D9000 /* EditHoleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHoleViewModel.swift; sourceTree = "<group>"; };
+		D38C9BA82C8223C4004D9000 /* GamesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesListViewModel.swift; sourceTree = "<group>"; };
+		D38C9BA92C8223C4004D9000 /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		D38C9BAA2C8223C4004D9000 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D38C9BAB2C8223C4004D9000 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D38C9BAC2C8223C4004D9000 /* NewGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewModel.swift; sourceTree = "<group>"; };
+		D38C9BAD2C8223C4004D9000 /* NewHoleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHoleViewModel.swift; sourceTree = "<group>"; };
+		D38C9BAE2C8223C4004D9000 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D38C9BAF2C8223C4004D9000 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		D38C9BB12C8223C4004D9000 /* AddHoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHoleView.swift; sourceTree = "<group>"; };
+		D38C9BB22C8223C4004D9000 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D38C9BB32C8223C4004D9000 /* EditGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGameView.swift; sourceTree = "<group>"; };
+		D38C9BB42C8223C4004D9000 /* EditHoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHoleView.swift; sourceTree = "<group>"; };
+		D38C9BB52C8223C4004D9000 /* GamesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
+		D38C9BB62C8223C4004D9000 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		D38C9BB72C8223C4004D9000 /* HoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleView.swift; sourceTree = "<group>"; };
+		D38C9BB82C8223C4004D9000 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D38C9BB92C8223C4004D9000 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D38C9BBA2C8223C4004D9000 /* NewGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
+		D38C9BBB2C8223C4004D9000 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D38C9BBC2C8223C4004D9000 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		D38C9BBE2C8223C4004D9000 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D38C9BBF2C8223C4004D9000 /* Hole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hole.swift; sourceTree = "<group>"; };
+		D38C9BC02C8223C4004D9000 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D38C9BE12C822469004D9000 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D38C9BE32C822472004D9000 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38C9BDE2C8223FC004D9000 /* FirebaseAuth in Frameworks */,
+				D38C9BE02C8223FC004D9000 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +95,9 @@
 		D31639CB2C7622E60069F938 = {
 			isa = PBXGroup;
 			children = (
+				D38C9BC12C8223C4004D9000 /* Models */,
+				D38C9BB02C8223C4004D9000 /* ViewModels */,
+				D38C9BBD2C8223C4004D9000 /* Views */,
 				D31639D62C7622E60069F938 /* PracticumProject */,
 				D31639D52C7622E60069F938 /* Products */,
 			);
@@ -51,6 +114,8 @@
 		D31639D62C7622E60069F938 /* PracticumProject */ = {
 			isa = PBXGroup;
 			children = (
+				D38C9BE32C822472004D9000 /* GoogleService-Info.plist */,
+				D38C9BE12C822469004D9000 /* Extensions.swift */,
 				D31639D72C7622E60069F938 /* PracticumProjectApp.swift */,
 				D31639D92C7622E60069F938 /* ContentView.swift */,
 				D31639DB2C7622E70069F938 /* Assets.xcassets */,
@@ -65,6 +130,53 @@
 				D31639DE2C7622E70069F938 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D38C9BB02C8223C4004D9000 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D38C9BA52C8223C4004D9000 /* AddHoleViewModel.swift */,
+				D38C9BA62C8223C4004D9000 /* EditGameViewModel.swift */,
+				D38C9BA72C8223C4004D9000 /* EditHoleViewModel.swift */,
+				D38C9BA82C8223C4004D9000 /* GamesListViewModel.swift */,
+				D38C9BA92C8223C4004D9000 /* GameViewModel.swift */,
+				D38C9BAA2C8223C4004D9000 /* LoginViewModel.swift */,
+				D38C9BAB2C8223C4004D9000 /* MainViewModel.swift */,
+				D38C9BAC2C8223C4004D9000 /* NewGameViewModel.swift */,
+				D38C9BAD2C8223C4004D9000 /* NewHoleViewModel.swift */,
+				D38C9BAE2C8223C4004D9000 /* ProfileViewModel.swift */,
+				D38C9BAF2C8223C4004D9000 /* RegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D38C9BBD2C8223C4004D9000 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D38C9BB12C8223C4004D9000 /* AddHoleView.swift */,
+				D38C9BB22C8223C4004D9000 /* CustomButton.swift */,
+				D38C9BB32C8223C4004D9000 /* EditGameView.swift */,
+				D38C9BB42C8223C4004D9000 /* EditHoleView.swift */,
+				D38C9BB52C8223C4004D9000 /* GamesListView.swift */,
+				D38C9BB62C8223C4004D9000 /* GameView.swift */,
+				D38C9BB72C8223C4004D9000 /* HoleView.swift */,
+				D38C9BB82C8223C4004D9000 /* LoginView.swift */,
+				D38C9BB92C8223C4004D9000 /* MainView.swift */,
+				D38C9BBA2C8223C4004D9000 /* NewGameView.swift */,
+				D38C9BBB2C8223C4004D9000 /* ProfileView.swift */,
+				D38C9BBC2C8223C4004D9000 /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D38C9BC12C8223C4004D9000 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D38C9BBE2C8223C4004D9000 /* Game.swift */,
+				D38C9BBF2C8223C4004D9000 /* Hole.swift */,
+				D38C9BC02C8223C4004D9000 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +195,10 @@
 			dependencies = (
 			);
 			name = PracticumProject;
+			packageProductDependencies = (
+				D38C9BDD2C8223FC004D9000 /* FirebaseAuth */,
+				D38C9BDF2C8223FC004D9000 /* FirebaseFirestore */,
+			);
 			productName = PracticumProject;
 			productReference = D31639D42C7622E60069F938 /* PracticumProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +227,9 @@
 				Base,
 			);
 			mainGroup = D31639CB2C7622E60069F938;
+			packageReferences = (
+				D38C9BDC2C8223FC004D9000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D31639D52C7622E60069F938 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +246,7 @@
 			files = (
 				D31639DF2C7622E70069F938 /* Preview Assets.xcassets in Resources */,
 				D31639DC2C7622E70069F938 /* Assets.xcassets in Resources */,
+				D38C9BE42C822472004D9000 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +257,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38C9BCA2C8223C4004D9000 /* NewHoleViewModel.swift in Sources */,
 				D31639DA2C7622E60069F938 /* ContentView.swift in Sources */,
 				D31639D82C7622E60069F938 /* PracticumProjectApp.swift in Sources */,
+				D38C9BD92C8223C4004D9000 /* Game.swift in Sources */,
+				D38C9BC42C8223C4004D9000 /* EditHoleViewModel.swift in Sources */,
+				D38C9BD32C8223C4004D9000 /* HoleView.swift in Sources */,
+				D38C9BC32C8223C4004D9000 /* EditGameViewModel.swift in Sources */,
+				D38C9BE22C822469004D9000 /* Extensions.swift in Sources */,
+				D38C9BC72C8223C4004D9000 /* LoginViewModel.swift in Sources */,
+				D38C9BD52C8223C4004D9000 /* MainView.swift in Sources */,
+				D38C9BCB2C8223C4004D9000 /* ProfileViewModel.swift in Sources */,
+				D38C9BC52C8223C4004D9000 /* GamesListViewModel.swift in Sources */,
+				D38C9BD02C8223C4004D9000 /* EditHoleView.swift in Sources */,
+				D38C9BD82C8223C4004D9000 /* RegisterView.swift in Sources */,
+				D38C9BCF2C8223C4004D9000 /* EditGameView.swift in Sources */,
+				D38C9BCC2C8223C4004D9000 /* RegisterViewModel.swift in Sources */,
+				D38C9BC22C8223C4004D9000 /* AddHoleViewModel.swift in Sources */,
+				D38C9BD12C8223C4004D9000 /* GamesListView.swift in Sources */,
+				D38C9BD22C8223C4004D9000 /* GameView.swift in Sources */,
+				D38C9BD72C8223C4004D9000 /* ProfileView.swift in Sources */,
+				D38C9BD42C8223C4004D9000 /* LoginView.swift in Sources */,
+				D38C9BDB2C8223C4004D9000 /* User.swift in Sources */,
+				D38C9BC62C8223C4004D9000 /* GameViewModel.swift in Sources */,
+				D38C9BC82C8223C4004D9000 /* MainViewModel.swift in Sources */,
+				D38C9BDA2C8223C4004D9000 /* Hole.swift in Sources */,
+				D38C9BCD2C8223C4004D9000 /* AddHoleView.swift in Sources */,
+				D38C9BD62C8223C4004D9000 /* NewGameView.swift in Sources */,
+				D38C9BC92C8223C4004D9000 /* NewGameViewModel.swift in Sources */,
+				D38C9BCE2C8223C4004D9000 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +489,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D38C9BDC2C8223FC004D9000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D38C9BDD2C8223FC004D9000 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D38C9BDC2C8223FC004D9000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D38C9BDF2C8223FC004D9000 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D38C9BDC2C8223FC004D9000 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D31639CC2C7622E60069F938 /* Project object */;
 }

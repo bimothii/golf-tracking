@@ -18,7 +18,6 @@ struct EditHoleView: View {
         self._showEditView = showEditView
     }
     var body: some View {
-        Text("Hi")
         VStack {
             Form {
                 Stepper("Par: \(viewModel.par)", value: $viewModel.par, in: 3...5)
