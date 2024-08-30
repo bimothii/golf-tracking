@@ -17,13 +17,11 @@ struct NewGameView: View {
             Form {
                 VStack {
                     Text("Game Name")
-                        .padding()
                     TextField("Enter Game Name", text: $viewModel.title)
-                        .padding()
                 }
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 VStack {
                     Text("Game Date")
-                        .padding()
                     DatePicker("Game Date", selection: $viewModel.gameDate, displayedComponents: .date)
                         .datePickerStyle(GraphicalDatePickerStyle())
                 }
