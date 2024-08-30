@@ -35,7 +35,7 @@ struct GamesListView: View {
                     }
                 }
                 if viewModel.games.count == 0 {
-                        Text("No Games")
+                        Text("Click the + in the Top Right to Add a Game")
                 } else {
                     List(viewModel.games) { game in
                         NavigationLink(game.title, destination: GameView(userId:userId, game: game, editGame:viewModel.edit))

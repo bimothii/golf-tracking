@@ -13,10 +13,20 @@ struct NewGameView: View {
 
     var body: some View {
         VStack {
+            
             Form {
-                TextField("Game Name", text: $viewModel.title)
-                DatePicker("Game Date", selection: $viewModel.gameDate, displayedComponents: .date)
-                    .datePickerStyle(GraphicalDatePickerStyle())
+                VStack {
+                    Text("Game Name")
+                        .padding()
+                    TextField("Enter Game Name", text: $viewModel.title)
+                        .padding()
+                }
+                VStack {
+                    Text("Game Date")
+                        .padding()
+                    DatePicker("Game Date", selection: $viewModel.gameDate, displayedComponents: .date)
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                }
                 HStack {
                     Spacer()
                     CustomButton(title: "Create Game", color: .purple) {
@@ -32,6 +42,7 @@ struct NewGameView: View {
                 Text("Cancel")
                     .foregroundColor(.red)
             }
+            
         }.ignoresSafeArea(.keyboard, edges: .bottom)
     }
 }
