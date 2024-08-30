@@ -26,7 +26,7 @@ struct HoleView: View {
                 }
                 Spacer()
                 VStack (alignment: .trailing) {
-                    Text("Par " + String(hole.par))
+                    Text("Par: " + String(hole.par))
                     Text("Strokes: " + String(hole.strokes))
                     Text("Putts: " + String(hole.putts))
                 }
