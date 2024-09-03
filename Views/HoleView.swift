@@ -22,15 +22,13 @@ struct HoleView: View {
                 }
                 Spacer()
                 VStack (alignment: .trailing) {
-                    Text("Par: " + String(hole.par))
-//                    Text("Strokes: " + String(hole.strokes))
-//                    Text("Putts: " + String(hole.putts))
+                    Text("Score: \(hole.score)")
                 }
             }
         }
     }
 }
-//
-//#Preview {
-//    HoleView(index: 1, hole: Hole(id: UUID().uuidString, par: hol, yardage: <#T##Int#>, score: <#T##Int#>, club: <#T##String#>, fairway: <#T##Bool#>, missTee: <#T##Bool#>, clubHit: <#T##String#>, gir: <#T##Bool#>, missApproach: <#T##String#>, upAndDown: <#T##Bool#>, totalPutts: <#T##Int#>, firstPuttDist: <#T##Int#>, penaltyStrokes: <#T##Int#>, shotsInside100: <#T##Int#>), executeAction: {})
-//}
+
+#Preview {
+    HoleView(index: 0, hole: Hole(id: UUID().uuidString, par: HoleConstants.par, yardage: HoleConstants.yardage, score: HoleConstants.score, club: HoleConstants.club, fairway: HoleConstants.fairway, missTee: HoleConstants.missTee, clubHit: HoleConstants.clubHit, gir: HoleConstants.gir, missApproach: HoleConstants.missApproach, upAndDown: HoleConstants.upAndDown, totalPutts: HoleConstants.totalPutts, firstPuttDist: HoleConstants.firstPuttDist, penaltyStrokes: HoleConstants.penaltyStrokes, shotsInside100: HoleConstants.shotsInside100), executeAction: {})
+}

@@ -20,6 +20,10 @@ struct EditHoleView: View {
     var body: some View {
         VStack {
             Form {
+                Text("Edit Hole")
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .padding([.top, .trailing], 7.5)
                 Stepper("Par: \(viewModel.par)", value: $viewModel.par, in: 3...5)
                 HStack {
                     Text("Yardage")
@@ -89,9 +93,10 @@ struct EditHoleView: View {
                             .keyboardType(.numberPad)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         }
+                    .padding(.top, 7.0)
+
 
                 }
-                    
 
                 HStack {
                     Spacer()
@@ -101,17 +106,21 @@ struct EditHoleView: View {
                     }
                     Spacer()
                 }
-            }
-            Button {
-                showEditView = false
-            } label: {
-                Text("Cancel")
-                    .foregroundColor(.red)
+                HStack {
+                    Spacer()
+                    Button {
+                        showEditView = false
+                    } label: {
+                        Text("Cancel")
+                            .foregroundColor(.red)
+                    }
+                    Spacer()
+                }
             }
         }
     }
 }
 
-#Preview {
-    EditHoleView(showEditView: Binding(get: {return true}, set: {_ in}), game:Game(id: UUID().uuidString, title: "Game 1", createdDate: Date().timeIntervalSince1970, gameDate: Date().timeIntervalSince1970), index: 0)
-}
+//#Preview {
+//    EditHoleView(showEditView: Binding(get: {return true}, set: {_ in}), game:Game(id: UUID().uuidString, title: "Game 1", createdDate: Date().timeIntervalSince1970, gameDate: Date().timeIntervalSince1970), index: 0)
+//}
