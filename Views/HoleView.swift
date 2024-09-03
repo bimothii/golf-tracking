@@ -19,22 +19,18 @@ struct HoleView: View {
                 VStack {
                     Text("Hole " + String(index))
                         .padding(.bottom, 5)
-                    
-                    if hole.par - hole.strokes >= 2 {
-                        Text("✅")
-                    }
                 }
                 Spacer()
                 VStack (alignment: .trailing) {
                     Text("Par: " + String(hole.par))
-                    Text("Strokes: " + String(hole.strokes))
-                    Text("Putts: " + String(hole.putts))
+//                    Text("Strokes: " + String(hole.strokes))
+//                    Text("Putts: " + String(hole.putts))
                 }
             }
         }
     }
 }
-
-#Preview {
-    HoleView(index: 1, hole: Hole(id: UUID().uuidString, par: 4, strokes: 1, putts: 1), executeAction: {})
-}
+//
+//#Preview {
+//    HoleView(index: 1, hole: Hole(id: UUID().uuidString, par: hol, yardage: <#T##Int#>, score: <#T##Int#>, club: <#T##String#>, fairway: <#T##Bool#>, missTee: <#T##Bool#>, clubHit: <#T##String#>, gir: <#T##Bool#>, missApproach: <#T##String#>, upAndDown: <#T##Bool#>, totalPutts: <#T##Int#>, firstPuttDist: <#T##Int#>, penaltyStrokes: <#T##Int#>, shotsInside100: <#T##Int#>), executeAction: {})
+//}

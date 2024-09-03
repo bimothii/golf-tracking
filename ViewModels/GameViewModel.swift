@@ -32,7 +32,7 @@ class GameViewModel: ObservableObject {
     func greenPercentage(game:Game) -> Float {
         var count = 0
         for hole in game.holes {
-            if hole.par - hole.strokes >= 2 {
+            if hole.gir {
                 count += 1
             }
         }

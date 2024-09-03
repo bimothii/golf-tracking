@@ -10,30 +10,29 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class AddHoleViewModel:ObservableObject {
-    @Published var par: Int = 4
-    @Published var yardage: Int = 300
-    @Published var score: Int = 0
+    @Published var par: Int = HoleConstants.par
+    @Published var yardage: Int = HoleConstants.yardage
+    @Published var score: Int = HoleConstants.score
     
-    @Published var club: String = "Driver"
-    @Published var fairway: Bool = true
-    @Published var missTee: Bool = true
+    @Published var club: String = HoleConstants.club
+    @Published var fairway: Bool = HoleConstants.fairway
+    @Published var missTee: String = HoleConstants.missTee
     
-    @Published var clubHit: String = "Iron"
-    @Published var gir: Bool = false
-    @Published var missApproach: String = "Short Left"
+    @Published var clubHit: String = HoleConstants.clubHit
+    @Published var gir: Bool = HoleConstants.gir
+    @Published var missApproach: String = HoleConstants.missApproach
     
-    @Published var upAndDown: Bool = true
+    @Published var upAndDown: Bool = HoleConstants.upAndDown
     
-    @Published var totalPutts: Int = 2
-    @Published var firstPuttDist: Int = 100
+    @Published var totalPutts: Int = HoleConstants.totalPutts
+    @Published var firstPuttDist: Int = HoleConstants.firstPuttDist
     
-    @Published var penaltyStrokes: Int = 0
-    @Published var shotsInside100: Int = 1
+    @Published var penaltyStrokes: Int = HoleConstants.penaltyStrokes
+    @Published var shotsInside100: Int = HoleConstants.shotsInside100
     
     
     func saveHole(game:Game) {
         var gameCopy = game
-        gameCopy.holes.append(Hole(id: UUID().uuidString, par: par, strokes: strokes, putts: putts))
         gameCopy.holes.append(Hole(id: UUID().uuidString, par: par, yardage: yardage, score: score, club: club, fairway: fairway, missTee: missTee, clubHit: clubHit, gir: gir, missApproach: missApproach, upAndDown: upAndDown, totalPutts: totalPutts, firstPuttDist: firstPuttDist, penaltyStrokes: penaltyStrokes, shotsInside100: shotsInside100))
         guard let uid = Auth.auth().currentUser?.uid else {return}
         

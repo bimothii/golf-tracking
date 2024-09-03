@@ -21,8 +21,78 @@ struct AddHoleView: View {
         VStack {
             Form {
                 Stepper("Par: \(viewModel.par)", value: $viewModel.par, in: 3...5)
-                Stepper("Strokes: \(viewModel.strokes)", value: $viewModel.strokes, in: 1...100)
-                Stepper("Putts: \(viewModel.putts)", value: $viewModel.putts, in: 1...100)
+                HStack {
+                    Text("Yardage")
+                    Spacer()
+                    TextField("Enter Yardage", value: $viewModel.yardage, formatter: NumberFormatter())
+                        .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
+                        .keyboardType(.numberPad)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                Stepper("Score: \(viewModel.score)", value: $viewModel.score, in: 1...12)
+                
+                VStack {
+                    Text("Tee Shot")
+                    HStack {
+                        Text("Club")
+                        Spacer()
+                        TextField("Enter Club", text: $viewModel.club)
+                            .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                    
+                    Toggle("Fairway", isOn: $viewModel.fairway)
+                    Picker("Miss", selection: $viewModel.missTee) {
+                        Text("-").tag("-")
+                        Text("Left").tag("Left")
+                        Text("Right").tag("Right")
+                    }
+                    .pickerStyle(MenuPickerStyle())                }
+
+                VStack {
+                    Text("Approach")
+                    
+                    HStack {
+                        Text("Club Hit")
+                        Spacer()
+                        TextField("Enter Club Hit", text: $viewModel.clubHit)
+                            .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                    
+                    Toggle("Green in Regulation", isOn: $viewModel.gir)
+                    
+                    Picker("Miss", selection: $viewModel.missApproach) {
+                        Text("Short Left").tag("Short Left")
+                        Text("Short").tag("Short")
+                        Text("Short Right").tag("Short Right")
+                        Text("Long Left").tag("Long Left")
+                        Text("Long").tag("Long")
+                        Text("Long Right").tag("Long Right")
+                    }
+                    .pickerStyle(MenuPickerStyle())
+                }
+                
+                VStack {
+                    Text("Short Game")
+                    Toggle("Up and Down", isOn: $viewModel.upAndDown)
+                }
+                
+                VStack {
+                    Text("Putts")
+                    Stepper("Total Putts: \(viewModel.totalPutts)", value: $viewModel.totalPutts, in: 0...8)
+                    HStack {
+                        Text("First Putt Distance")
+                        Spacer()
+                        TextField("Enter Putt Distance", value: $viewModel.firstPuttDist, formatter: NumberFormatter())
+                            .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
+                            .keyboardType(.numberPad)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        }
+
+                }
+                    
+
                 HStack {
                     Spacer()
                     CustomButton(title: "Save Hole", color: .purple) {

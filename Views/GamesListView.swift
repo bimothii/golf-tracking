@@ -36,7 +36,7 @@ struct GamesListView: View {
                 }
                 if viewModel.games.count == 0 {
                         Text("Click the + in the Top Right to Add a Game")
-                } else {
+                }
                     List(viewModel.games) { game in
                         NavigationLink(game.title, destination: GameView(userId:userId, game: game, editGame:viewModel.edit))
                             .swipeActions {
@@ -67,7 +67,6 @@ struct GamesListView: View {
                     .sheet(isPresented: $viewModel.showEditGame, content: {
                         EditGameView(game: viewModel.selectedGame, showEditGame: $viewModel.showEditGame)
                     })
-                }
             }
         }
         .alert(isPresented: $viewModel.showDeleteConfirmation) {
