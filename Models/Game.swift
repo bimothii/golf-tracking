@@ -17,7 +17,7 @@ struct Game: Codable, Identifiable {
     func score() -> Int {
         var total = 0
         for hole in holes {
-            total += max(hole.par - hole.strokes - hole.putts, 0)
+            total += hole.score
         }
         return total
     }

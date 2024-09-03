@@ -19,7 +19,6 @@
 		D38C9BC72C8223C4004D9000 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAA2C8223C4004D9000 /* LoginViewModel.swift */; };
 		D38C9BC82C8223C4004D9000 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAB2C8223C4004D9000 /* MainViewModel.swift */; };
 		D38C9BC92C8223C4004D9000 /* NewGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAC2C8223C4004D9000 /* NewGameViewModel.swift */; };
-		D38C9BCA2C8223C4004D9000 /* NewHoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAD2C8223C4004D9000 /* NewHoleViewModel.swift */; };
 		D38C9BCB2C8223C4004D9000 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAE2C8223C4004D9000 /* ProfileViewModel.swift */; };
 		D38C9BCC2C8223C4004D9000 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BAF2C8223C4004D9000 /* RegisterViewModel.swift */; };
 		D38C9BCD2C8223C4004D9000 /* AddHoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BB12C8223C4004D9000 /* AddHoleView.swift */; };
@@ -57,7 +56,6 @@
 		D38C9BAA2C8223C4004D9000 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D38C9BAB2C8223C4004D9000 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		D38C9BAC2C8223C4004D9000 /* NewGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewModel.swift; sourceTree = "<group>"; };
-		D38C9BAD2C8223C4004D9000 /* NewHoleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHoleViewModel.swift; sourceTree = "<group>"; };
 		D38C9BAE2C8223C4004D9000 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D38C9BAF2C8223C4004D9000 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D38C9BB12C8223C4004D9000 /* AddHoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHoleView.swift; sourceTree = "<group>"; };
@@ -95,9 +93,9 @@
 		D31639CB2C7622E60069F938 = {
 			isa = PBXGroup;
 			children = (
-				D38C9BC12C8223C4004D9000 /* Models */,
-				D38C9BB02C8223C4004D9000 /* ViewModels */,
 				D38C9BBD2C8223C4004D9000 /* Views */,
+				D38C9BB02C8223C4004D9000 /* ViewModels */,
+				D38C9BC12C8223C4004D9000 /* Models */,
 				D31639D62C7622E60069F938 /* PracticumProject */,
 				D31639D52C7622E60069F938 /* Products */,
 			);
@@ -143,7 +141,6 @@
 				D38C9BAA2C8223C4004D9000 /* LoginViewModel.swift */,
 				D38C9BAB2C8223C4004D9000 /* MainViewModel.swift */,
 				D38C9BAC2C8223C4004D9000 /* NewGameViewModel.swift */,
-				D38C9BAD2C8223C4004D9000 /* NewHoleViewModel.swift */,
 				D38C9BAE2C8223C4004D9000 /* ProfileViewModel.swift */,
 				D38C9BAF2C8223C4004D9000 /* RegisterViewModel.swift */,
 			);
@@ -257,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38C9BCA2C8223C4004D9000 /* NewHoleViewModel.swift in Sources */,
 				D31639DA2C7622E60069F938 /* ContentView.swift in Sources */,
 				D31639D82C7622E60069F938 /* PracticumProjectApp.swift in Sources */,
 				D38C9BD92C8223C4004D9000 /* Game.swift in Sources */,

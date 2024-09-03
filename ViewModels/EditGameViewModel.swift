@@ -1,5 +1,5 @@
 //
-//  NewHoleViewModel.swift
+//  EditGameViewModel.swift
 //  GolfApp
 //
 //  Created by Brian Kim on 6/17/24.
