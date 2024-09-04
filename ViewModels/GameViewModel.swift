@@ -28,14 +28,4 @@ class GameViewModel: ObservableObject {
             .document(gameCopy.id)
             .setData(gameCopy.asDictionary())
     }
-    
-    func greenPercentage(game:Game) -> Float {
-        var count = 0
-        for hole in game.holes {
-            if hole.gir {
-                count += 1
-            }
-        }
-        return round(Float(count) / Float(game.holes.count) * 1000) / 10
-    }
 }

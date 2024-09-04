@@ -31,7 +31,6 @@ struct GameView: View {
                             })
                         }
                     }
-                    Text("Green in Regulation: " + String(viewModel.greenPercentage(game: game)) + "%")
                 }
             }
             .navigationTitle(game.title)

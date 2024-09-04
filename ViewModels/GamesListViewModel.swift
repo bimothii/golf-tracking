@@ -10,7 +10,6 @@ import FirebaseFirestore
 
 class GamesListViewModel: ObservableObject {
     @Published var games:[Game] = []
-    @Published var sortBy:String = "Name"
     @Published var showingNewGameView: Bool = false
     @Published var showDeleteConfirmation = false
     @Published var showEditGame = false
@@ -52,22 +51,7 @@ class GamesListViewModel: ObservableObject {
             .setData(gameCopy.asDictionary())
     }
     
-    func setSortBy(newSortBy:String) {
-        let db = Firestore.firestore()
-        db.collection("users")
-            .document(userId)
-            .updateData([
-                "sortBy": newSortBy
-                ]) { err in
-                    if let err = err {
-                        print("Error updating document: \(err)")
-                    } else {
-                        print("Document successfully updated")
-                    }
-                }
-    }
-    
-    func sortGames() {
+    func sortGames(sortBy:String) {
         if sortBy == "Name" {
             games = games.sorted(by: { $0.title < $1.title })
         }
@@ -75,7 +59,6 @@ class GamesListViewModel: ObservableObject {
             games = games.sorted(by: { $0.gameDate < $1.gameDate })
         }
         else if sortBy == "Score" {
-
             games = games.sorted(by: { (game1: Game, game2: Game) -> Bool in
                 if game1.score() == game2.score() {
                     return game1.title < game2.title
@@ -86,9 +69,7 @@ class GamesListViewModel: ObservableObject {
         else {
             games = games.sorted(by: { $0.title < $1.title })
         }
-        for game in games {
-            print(game.title, game.gameDate)
-        }
+
     }
     
     func fetchGames() {
@@ -105,8 +86,6 @@ class GamesListViewModel: ObservableObject {
                     self.games = documents.compactMap { queryDocumentSnapshot -> Game? in
                         return try? queryDocumentSnapshot.data(as: Game.self)
                     }
-                
-                    self.sortGames()
                 }
         db.collection("users")
             .document(userId)
@@ -117,12 +96,11 @@ class GamesListViewModel: ObservableObject {
                 }
                 
                 if let value = document.data()?["sortBy"] as? String {
-                    self.sortBy = value
+                    self.sortGames(sortBy: value)
                 }
                 else {
-                    self.sortBy = "Name"
+                    self.sortGames(sortBy: "Name")
                 }
-                self.sortGames()
             }
     }
 }

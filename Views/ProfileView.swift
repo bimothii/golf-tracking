@@ -20,7 +20,6 @@ struct ProfileView: View {
                             .aspectRatio(contentMode: .fit)
                             .foregroundColor(.purple)
                             .frame(width: 125, height: 125)
-                            .padding(.top, 100)
                             .padding()
                         Text("Name: " + user.name)
                             .padding(5)

@@ -52,7 +52,8 @@ struct AddHoleView: View {
                         Text("Left").tag("Left")
                         Text("Right").tag("Right")
                     }
-                    .pickerStyle(MenuPickerStyle())                }
+                    .pickerStyle(MenuPickerStyle())
+                }
 
                 VStack {
                     Text("Approach")

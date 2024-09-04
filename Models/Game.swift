@@ -21,4 +21,14 @@ struct Game: Codable, Identifiable {
         }
         return total
     }
+    
+    func getDate() -> String {
+        let date = Date(timeIntervalSince1970: gameDate)
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.locale = Locale.current
+
+        return dateFormatter.string(from: date)
+    }
 }

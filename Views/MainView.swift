@@ -16,9 +16,9 @@ struct MainView: View {
                     .tabItem {
                         Label("Games", systemImage: "figure.golf")
                     }
-                ProfileView()
+                SettingsView(userId: viewModel.currentUserId)
                     .tabItem {
-                        Label("Profile", systemImage: "person.crop.circle")
+                        Label("Settings", systemImage: "gearshape")
                     }
             }
         } else {

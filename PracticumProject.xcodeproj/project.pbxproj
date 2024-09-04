@@ -40,6 +40,8 @@
 		D38C9BE02C8223FC004D9000 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D38C9BDF2C8223FC004D9000 /* FirebaseFirestore */; };
 		D38C9BE22C822469004D9000 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BE12C822469004D9000 /* Extensions.swift */; };
 		D38C9BE42C822472004D9000 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D38C9BE32C822472004D9000 /* GoogleService-Info.plist */; };
+		D3EC84482C89DAEA001BD343 /* SetttingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EC84472C89DAEA001BD343 /* SetttingsView.swift */; };
+		D3EC844A2C89DB38001BD343 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EC84492C89DB38001BD343 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		D38C9BC02C8223C4004D9000 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D38C9BE12C822469004D9000 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D38C9BE32C822472004D9000 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3EC84472C89DAEA001BD343 /* SetttingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetttingsView.swift; sourceTree = "<group>"; };
+		D3EC84492C89DB38001BD343 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 				D38C9BAC2C8223C4004D9000 /* NewGameViewModel.swift */,
 				D38C9BAE2C8223C4004D9000 /* ProfileViewModel.swift */,
 				D38C9BAF2C8223C4004D9000 /* RegisterViewModel.swift */,
+				D3EC84492C89DB38001BD343 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				D38C9BBA2C8223C4004D9000 /* NewGameView.swift */,
 				D38C9BBB2C8223C4004D9000 /* ProfileView.swift */,
 				D38C9BBC2C8223C4004D9000 /* RegisterView.swift */,
+				D3EC84472C89DAEA001BD343 /* SetttingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				D38C9BD92C8223C4004D9000 /* Game.swift in Sources */,
 				D38C9BC42C8223C4004D9000 /* EditHoleViewModel.swift in Sources */,
 				D38C9BD32C8223C4004D9000 /* HoleView.swift in Sources */,
+				D3EC844A2C89DB38001BD343 /* SettingsViewModel.swift in Sources */,
 				D38C9BC32C8223C4004D9000 /* EditGameViewModel.swift in Sources */,
 				D38C9BE22C822469004D9000 /* Extensions.swift in Sources */,
 				D38C9BC72C8223C4004D9000 /* LoginViewModel.swift in Sources */,
@@ -281,6 +288,7 @@
 				D38C9BCD2C8223C4004D9000 /* AddHoleView.swift in Sources */,
 				D38C9BD62C8223C4004D9000 /* NewGameView.swift in Sources */,
 				D38C9BC92C8223C4004D9000 /* NewGameViewModel.swift in Sources */,
+				D3EC84482C89DAEA001BD343 /* SetttingsView.swift in Sources */,
 				D38C9BCE2C8223C4004D9000 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

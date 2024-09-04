@@ -22,23 +22,17 @@ struct GamesListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack {
-                    Text("Sort By:")
-                    Picker("Select an option", selection: $viewModel.sortBy) {
-                        ForEach(options, id: \.self) { option in
-                            Text(option).tag(option)
-                        }
-                    }
-                    .pickerStyle(MenuPickerStyle())
-                    .onChange(of: viewModel.sortBy) {
-                        viewModel.setSortBy(newSortBy: viewModel.sortBy)
-                    }
-                }
                 if viewModel.games.count == 0 {
-                        Text("Click the + in the Top Right to Add a Game")
+                    Text("Click the + in the Top Right to Add a Game")
                 }
                     List(viewModel.games) { game in
-                        NavigationLink(game.title, destination: GameView(userId:userId, game: game, editGame:viewModel.edit))
+                        NavigationLink(destination: GameView(userId:userId, game: game, editGame:viewModel.edit)) {
+                            HStack{
+                                Text(game.title)
+                                Spacer()
+                                Text(game.getDate())
+                            }
+                            }
                             .swipeActions {
                                 Button("Edit") {
                                     viewModel.showEditGame = true
