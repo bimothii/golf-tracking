@@ -20,7 +20,7 @@ struct EditHoleView: View {
     var body: some View {
         VStack {
             Form {
-                Text("Edit Hole")
+                Text("Edit Hole \(viewModel.index + 1)")
                     .font(.system(size: 24))
                     .fontWeight(.bold)
                     .padding([.top, .trailing], 7.5)
@@ -94,8 +94,6 @@ struct EditHoleView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         }
                     .padding(.top, 7.0)
-
-
                 }
 
                 HStack {

@@ -102,7 +102,7 @@ struct AddHoleView: View {
 
                 HStack {
                     Spacer()
-                    CustomButton(title: "Save Hole", color: .purple) {
+                    CustomButton(title: "Add Hole", color: .purple) {
                         viewModel.saveHole(game:game)
                         showAddView = false
                     }

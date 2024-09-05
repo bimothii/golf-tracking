@@ -13,10 +13,12 @@ class GameViewModel: ObservableObject {
     @Published var showAddHole = false
     @Published var showEditHoleView = false
     @Published var holeIndex = -1
-    
-    func deleteHole(game:Game, index:Int) {
+    @Published var showDeleteHole = false
+    @Published var selectedIndex = 0
+
+    func deleteHole(game:Game) {
         var gameCopy = game
-        gameCopy.holes.remove(at: index)
+        gameCopy.holes.remove(at: selectedIndex)
         
         guard let uid = Auth.auth().currentUser?.uid else {return}
         

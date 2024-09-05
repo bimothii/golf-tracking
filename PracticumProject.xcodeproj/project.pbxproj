@@ -11,6 +11,7 @@
 		D31639DA2C7622E60069F938 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31639D92C7622E60069F938 /* ContentView.swift */; };
 		D31639DC2C7622E70069F938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31639DB2C7622E70069F938 /* Assets.xcassets */; };
 		D31639DF2C7622E70069F938 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31639DE2C7622E70069F938 /* Preview Assets.xcassets */; };
+		D366B53E2C8B3C2100C02E8A /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366B53D2C8B3C2100C02E8A /* HowToView.swift */; };
 		D38C9BC22C8223C4004D9000 /* AddHoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA52C8223C4004D9000 /* AddHoleViewModel.swift */; };
 		D38C9BC32C8223C4004D9000 /* EditGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA62C8223C4004D9000 /* EditGameViewModel.swift */; };
 		D38C9BC42C8223C4004D9000 /* EditHoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA72C8223C4004D9000 /* EditHoleViewModel.swift */; };
@@ -50,6 +51,7 @@
 		D31639D92C7622E60069F938 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D31639DB2C7622E70069F938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D31639DE2C7622E70069F938 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D366B53D2C8B3C2100C02E8A /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		D38C9BA52C8223C4004D9000 /* AddHoleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHoleViewModel.swift; sourceTree = "<group>"; };
 		D38C9BA62C8223C4004D9000 /* EditGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGameViewModel.swift; sourceTree = "<group>"; };
 		D38C9BA72C8223C4004D9000 /* EditHoleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHoleViewModel.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				D38C9BBB2C8223C4004D9000 /* ProfileView.swift */,
 				D38C9BBC2C8223C4004D9000 /* RegisterView.swift */,
 				D3EC84472C89DAEA001BD343 /* SetttingsView.swift */,
+				D366B53D2C8B3C2100C02E8A /* HowToView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				D3EC844A2C89DB38001BD343 /* SettingsViewModel.swift in Sources */,
 				D38C9BC32C8223C4004D9000 /* EditGameViewModel.swift in Sources */,
 				D38C9BE22C822469004D9000 /* Extensions.swift in Sources */,
+				D366B53E2C8B3C2100C02E8A /* HowToView.swift in Sources */,
 				D38C9BC72C8223C4004D9000 /* LoginViewModel.swift in Sources */,
 				D38C9BD52C8223C4004D9000 /* MainView.swift in Sources */,
 				D38C9BCB2C8223C4004D9000 /* ProfileViewModel.swift in Sources */,

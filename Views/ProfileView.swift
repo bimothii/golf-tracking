@@ -31,15 +31,14 @@ struct ProfileView: View {
                         Button("Log Out") {
                             showLogoutConfirmation = true
                         }
-                        .tint(.red)
                         .padding(5)
+                        Spacer()
                         Button("Delete Account") {
                             showDeleteConfirmation = true
                         }
                         .tint(.red)
                         .padding(5)
                     }
-                    Spacer()
                 } else {
                     Text("Loading Profile...")
                     Button("Log Out") {

@@ -30,8 +30,7 @@ class ProfileViewModel: ObservableObject {
                     name: data["name"] as? String ?? "",
                     email: data["email"] as? String ?? "",
                     joined: data["joined"] as? TimeInterval ?? 0,
-                    sortBy: data["sortBy"] as? String ?? "sortBy"
-                )
+                    sortBy: data["sortBy"] as? String ?? "sortBy"                )
             }
         }
     }
