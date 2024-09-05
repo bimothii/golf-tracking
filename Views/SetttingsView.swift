@@ -21,8 +21,10 @@ struct SettingsView: View {
             Form {
                 NavigationLink("Profile", destination: ProfileView())
                 Picker("Sort Games By", selection: $viewModel.sortBy) {
-                    Text("Name").tag("Name")
-                    Text("Date").tag("Date")
+                    Text("Name (A-Z)").tag("Name (A-Z)")
+                    Text("Name (Z-A)").tag("Name (Z-A)")
+                    Text("Date (Early-Late)").tag("Date (Early-Late)")
+                    Text("Date (Late-Early)").tag("Date (Late-Early)")
                 }
                 .onChange(of: viewModel.sortBy) {
                     viewModel.setSortBy(newSortBy: viewModel.sortBy)

@@ -52,20 +52,18 @@ class GamesListViewModel: ObservableObject {
     }
     
     func sortGames(sortBy:String) {
-        if sortBy == "Name" {
+        if sortBy == "Name (A-Z)" {
             games = games.sorted(by: { $0.title < $1.title })
         }
-        else if sortBy == "Date" {
+        else if sortBy == "Name (Z-A)" {
+            games = games.sorted(by: { $0.title > $1.title })
+        }
+        else if sortBy == "Date (Early-Late)" {
             games = games.sorted(by: { $0.gameDate < $1.gameDate })
         }
-        else if sortBy == "Score" {
-            games = games.sorted(by: { (game1: Game, game2: Game) -> Bool in
-                if game1.score() == game2.score() {
-                    return game1.title < game2.title
-                } else {
-                    return game1.score() < game2.score()
-                }
-            })        }
+        else if sortBy == "Date (Late-Early)" {
+            games = games.sorted(by: { $0.gameDate > $1.gameDate })
+        }
         else {
             games = games.sorted(by: { $0.title < $1.title })
         }
@@ -99,7 +97,7 @@ class GamesListViewModel: ObservableObject {
                     self.sortGames(sortBy: value)
                 }
                 else {
-                    self.sortGames(sortBy: "Name")
+                    self.sortGames(sortBy: "Name (A-Z)")
                 }
             }
     }

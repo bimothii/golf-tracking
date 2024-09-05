@@ -10,7 +10,7 @@ import FirebaseFirestore
 
 class SettingsViewModel:ObservableObject {
     private let userId: String
-    @Published var sortBy:String = "Name"
+    @Published var sortBy:String = "Name (A-Z)"
     
     func setSortBy(newSortBy:String) {
         let db = Firestore.firestore()

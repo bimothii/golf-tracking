@@ -43,4 +43,9 @@ class ProfileViewModel: ObservableObject {
             print(error)
         }
     }
+    
+    func deleteUser() {
+        
+        logout()
+    }
 }

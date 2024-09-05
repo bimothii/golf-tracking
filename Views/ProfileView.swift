@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
     @State var showLogoutConfirmation = false
+    @State var showDeleteConfirmation = false
     var body: some View {
         NavigationView {
             VStack {
@@ -29,6 +30,11 @@ struct ProfileView: View {
                             .padding(5)
                         Button("Log Out") {
                             showLogoutConfirmation = true
+                        }
+                        .tint(.red)
+                        .padding(5)
+                        Button("Delete Account") {
+                            showDeleteConfirmation = true
                         }
                         .tint(.red)
                         .padding(5)
@@ -53,6 +59,16 @@ struct ProfileView: View {
                 title: Text("Log Out"),
                 message: Text("Are you sure you want to log out?"),
                 primaryButton: .destructive(Text("Log Out")) {
+                    viewModel.logout()
+                },
+                secondaryButton: .cancel()
+            )
+        }
+        .alert(isPresented: $showDeleteConfirmation) {
+            Alert(
+                title: Text("Delete Account"),
+                message: Text("Are you sure you want to delete your account?"),
+                primaryButton: .destructive(Text("Delete Account")) {
                     viewModel.logout()
                 },
                 secondaryButton: .cancel()
