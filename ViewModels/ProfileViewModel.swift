@@ -44,6 +44,32 @@ class ProfileViewModel: ObservableObject {
     }
     
     func deleteUser() {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        let db = Firestore.firestore()
+        let documentRef = db.collection("users").document(userId)
+
+        // Perform the delete operation
+        documentRef.delete { error in
+            if let error = error {
+                print("Error removing document: \(error.localizedDescription)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        
+        if let user = Auth.auth().currentUser {
+            user.delete { error in
+                if let error = error {
+                    print("Error deleting user: \(error.localizedDescription)")
+                } else {
+                    print("User account successfully deleted!")
+                }
+            }
+        } else {
+            print("No user is currently signed in.")
+        }
         
         logout()
     }
