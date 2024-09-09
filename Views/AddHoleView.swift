@@ -38,13 +38,13 @@ struct AddHoleView: View {
                 
                 VStack {
                     Text("Tee Shot")
-                    HStack {
-                        Text("Club")
-                        Spacer()
-                        TextField("Enter Club", text: $viewModel.club)
-                            .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    Picker("Club", selection: $viewModel.club) {
+                        ForEach(HoleConstants.clubs, id: \.self) { club in
+                            Text(club).tag(club)
+                        }
                     }
+                    .pickerStyle(MenuPickerStyle())
                     
                     Toggle("Fairway", isOn: $viewModel.fairway)
                     Picker("Miss", selection: $viewModel.missTee) {
@@ -58,17 +58,17 @@ struct AddHoleView: View {
                 VStack {
                     Text("Approach")
                     
-                    HStack {
-                        Text("Club Hit")
-                        Spacer()
-                        TextField("Enter Club Hit", text: $viewModel.clubHit)
-                            .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Picker("Club Hit", selection: $viewModel.clubHit) {
+                        ForEach(HoleConstants.clubs, id: \.self) { club in
+                            Text(club).tag(club)
+                        }
                     }
+                    .pickerStyle(MenuPickerStyle())
                     
                     Toggle("Green in Regulation", isOn: $viewModel.gir)
                     
                     Picker("Miss", selection: $viewModel.missApproach) {
+                        Text("-").tag("-")
                         Text("Short Left").tag("Short Left")
                         Text("Short").tag("Short")
                         Text("Short Right").tag("Short Right")
@@ -78,10 +78,11 @@ struct AddHoleView: View {
                     }
                     .pickerStyle(MenuPickerStyle())
                 }
-                
-                VStack {
-                    Text("Short Game")
-                    Toggle("Up and Down", isOn: $viewModel.upAndDown)
+                if (!viewModel.gir) {
+                    VStack {
+                        Text("Short Game")
+                        Toggle("Up and Down", isOn: $viewModel.upAndDown)
+                    }
                 }
                 
                 VStack {
@@ -97,6 +98,11 @@ struct AddHoleView: View {
                     }
                     .padding(.top, 7.0)
 
+                }
+                
+                VStack {
+                    Stepper("Penalty Strokes: \(viewModel.penaltyStrokes)", value: $viewModel.penaltyStrokes, in: 0...10)
+                    Stepper("Shots Inside 100 Yards: \(viewModel.shotsInside100)", value: $viewModel.shotsInside100, in: 0...10)
                 }
                     
 
