@@ -35,6 +35,7 @@ struct GamesListView: View {
                                 Text(game.getDate())
                             }
                         }
+                        
                         .swipeActions {
                             Button("Edit") {
                                 viewModel.showEditGame = true

@@ -11,6 +11,8 @@
 		D31639DA2C7622E60069F938 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31639D92C7622E60069F938 /* ContentView.swift */; };
 		D31639DC2C7622E70069F938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31639DB2C7622E70069F938 /* Assets.xcassets */; };
 		D31639DF2C7622E70069F938 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31639DE2C7622E70069F938 /* Preview Assets.xcassets */; };
+		D325E2DE2CA6E608002C78DD /* CustomSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D325E2DD2CA6E608002C78DD /* CustomSelect.swift */; };
+		D325E2E02CA6EECF002C78DD /* CustomNumberInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D325E2DF2CA6EECF002C78DD /* CustomNumberInput.swift */; };
 		D366B53E2C8B3C2100C02E8A /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366B53D2C8B3C2100C02E8A /* HowToView.swift */; };
 		D38C9BC22C8223C4004D9000 /* AddHoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA52C8223C4004D9000 /* AddHoleViewModel.swift */; };
 		D38C9BC32C8223C4004D9000 /* EditGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BA62C8223C4004D9000 /* EditGameViewModel.swift */; };
@@ -41,6 +43,8 @@
 		D38C9BE02C8223FC004D9000 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D38C9BDF2C8223FC004D9000 /* FirebaseFirestore */; };
 		D38C9BE22C822469004D9000 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C9BE12C822469004D9000 /* Extensions.swift */; };
 		D38C9BE42C822472004D9000 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D38C9BE32C822472004D9000 /* GoogleService-Info.plist */; };
+		D3D11E042CA59B6E0091A581 /* ApproachShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D11E032CA59B6E0091A581 /* ApproachShot.swift */; };
+		D3D11E062CA5BD420091A581 /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D11E052CA5BD420091A581 /* CustomStepper.swift */; };
 		D3EC84482C89DAEA001BD343 /* SetttingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EC84472C89DAEA001BD343 /* SetttingsView.swift */; };
 		D3EC844A2C89DB38001BD343 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EC84492C89DB38001BD343 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +55,8 @@
 		D31639D92C7622E60069F938 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D31639DB2C7622E70069F938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D31639DE2C7622E70069F938 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D325E2DD2CA6E608002C78DD /* CustomSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSelect.swift; sourceTree = "<group>"; };
+		D325E2DF2CA6EECF002C78DD /* CustomNumberInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberInput.swift; sourceTree = "<group>"; };
 		D366B53D2C8B3C2100C02E8A /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		D38C9BA52C8223C4004D9000 /* AddHoleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHoleViewModel.swift; sourceTree = "<group>"; };
 		D38C9BA62C8223C4004D9000 /* EditGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGameViewModel.swift; sourceTree = "<group>"; };
@@ -79,6 +85,8 @@
 		D38C9BC02C8223C4004D9000 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D38C9BE12C822469004D9000 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D38C9BE32C822472004D9000 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3D11E032CA59B6E0091A581 /* ApproachShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproachShot.swift; sourceTree = "<group>"; };
+		D3D11E052CA5BD420091A581 /* CustomStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
 		D3EC84472C89DAEA001BD343 /* SetttingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetttingsView.swift; sourceTree = "<group>"; };
 		D3EC84492C89DB38001BD343 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +167,10 @@
 			children = (
 				D38C9BB12C8223C4004D9000 /* AddHoleView.swift */,
 				D38C9BB22C8223C4004D9000 /* CustomButton.swift */,
+				D3D11E052CA5BD420091A581 /* CustomStepper.swift */,
+				D325E2DD2CA6E608002C78DD /* CustomSelect.swift */,
+				D325E2DF2CA6EECF002C78DD /* CustomNumberInput.swift */,
+				D3D11E032CA59B6E0091A581 /* ApproachShot.swift */,
 				D38C9BB32C8223C4004D9000 /* EditGameView.swift */,
 				D38C9BB42C8223C4004D9000 /* EditHoleView.swift */,
 				D38C9BB52C8223C4004D9000 /* GamesListView.swift */,
@@ -271,6 +283,7 @@
 				D3EC844A2C89DB38001BD343 /* SettingsViewModel.swift in Sources */,
 				D38C9BC32C8223C4004D9000 /* EditGameViewModel.swift in Sources */,
 				D38C9BE22C822469004D9000 /* Extensions.swift in Sources */,
+				D3D11E062CA5BD420091A581 /* CustomStepper.swift in Sources */,
 				D366B53E2C8B3C2100C02E8A /* HowToView.swift in Sources */,
 				D38C9BC72C8223C4004D9000 /* LoginViewModel.swift in Sources */,
 				D38C9BD52C8223C4004D9000 /* MainView.swift in Sources */,
@@ -280,6 +293,7 @@
 				D38C9BD82C8223C4004D9000 /* RegisterView.swift in Sources */,
 				D38C9BCF2C8223C4004D9000 /* EditGameView.swift in Sources */,
 				D38C9BCC2C8223C4004D9000 /* RegisterViewModel.swift in Sources */,
+				D325E2DE2CA6E608002C78DD /* CustomSelect.swift in Sources */,
 				D38C9BC22C8223C4004D9000 /* AddHoleViewModel.swift in Sources */,
 				D38C9BD12C8223C4004D9000 /* GamesListView.swift in Sources */,
 				D38C9BD22C8223C4004D9000 /* GameView.swift in Sources */,
@@ -287,7 +301,9 @@
 				D38C9BD42C8223C4004D9000 /* LoginView.swift in Sources */,
 				D38C9BDB2C8223C4004D9000 /* User.swift in Sources */,
 				D38C9BC62C8223C4004D9000 /* GameViewModel.swift in Sources */,
+				D325E2E02CA6EECF002C78DD /* CustomNumberInput.swift in Sources */,
 				D38C9BC82C8223C4004D9000 /* MainViewModel.swift in Sources */,
+				D3D11E042CA59B6E0091A581 /* ApproachShot.swift in Sources */,
 				D38C9BDA2C8223C4004D9000 /* Hole.swift in Sources */,
 				D38C9BCD2C8223C4004D9000 /* AddHoleView.swift in Sources */,
 				D38C9BD62C8223C4004D9000 /* NewGameView.swift in Sources */,

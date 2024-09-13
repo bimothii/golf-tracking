@@ -10,6 +10,7 @@ import SwiftUI
 struct EditHoleView: View {
     @StateObject var viewModel:EditHoleViewModel
     @Binding var showEditView:Bool
+    @FocusState private var isYardageFieldFocused: Bool
     let game:Game
     
     init (showEditView:Binding<Bool>, game:Game, index:Int) {
@@ -30,53 +31,51 @@ struct EditHoleView: View {
                     Spacer()
                     TextField("Enter Yardage", value: $viewModel.yardage, formatter: NumberFormatter())
                         .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
+                        .focused($isYardageFieldFocused)
                         .keyboardType(.numberPad)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
+                }
                 Stepper("Score: \(viewModel.score)", value: $viewModel.score, in: 1...12)
                 
-                VStack {
-                    Text("Tee Shot")
-                    
-                    Picker("Club", selection: $viewModel.club) {
-                        ForEach(HoleConstants.clubs, id: \.self) { club in
-                            Text(club).tag(club)
+                if (viewModel.par > 3) {
+                    VStack {
+                        Text("Tee Shot")
+                        
+                        Picker("Tee Club", selection: $viewModel.teeClub) {
+                            ForEach(HoleConstants.clubs, id: \.self) { club in
+                                Text(club).tag(club)
+                            }
                         }
-                    }
-                    .pickerStyle(MenuPickerStyle())
-                    Toggle("Fairway", isOn: $viewModel.fairway)
-                    Picker("Miss", selection: $viewModel.missTee) {
-                        Text("-").tag("-")
-                        Text("Left").tag("Left")
-                        Text("Right").tag("Right")
-                    }
-                    .pickerStyle(MenuPickerStyle())                }
+                        .pickerStyle(MenuPickerStyle())
 
+                        Picker("Tee Shot", selection: $viewModel.teeShot) {
+                            ForEach(HoleConstants.teeShots, id: \.self) { club in
+                                Text(club).tag(club)
+                            }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                    }
+                }
+                
                 VStack {
                     Text("Approach")
                     
-                    Picker("Club Hit", selection: $viewModel.clubHit) {
+                    Picker("Approach Club", selection: $viewModel.approachClub) {
                         ForEach(HoleConstants.clubs, id: \.self) { club in
                             Text(club).tag(club)
                         }
                     }
                     .pickerStyle(MenuPickerStyle())
                     
-                    Toggle("Green in Regulation", isOn: $viewModel.gir)
-                    
-                    Picker("Miss", selection: $viewModel.missApproach) {
-                        Text("-").tag("-")
-                        Text("Short Left").tag("Short Left")
-                        Text("Short").tag("Short")
-                        Text("Short Right").tag("Short Right")
-                        Text("Long Left").tag("Long Left")
-                        Text("Long").tag("Long")
-                        Text("Long Right").tag("Long Right")
+                    Picker("Approach Shot", selection: $viewModel.approachShot) {
+                        ForEach(HoleConstants.approachShots, id: \.self) { club in
+                            Text(club).tag(club)
+                        }
                     }
                     .pickerStyle(MenuPickerStyle())
                 }
                 
-                if (!viewModel.gir) {
+                if (viewModel.approachShot == "GIR") {
                     VStack {
                         Text("Short Game")
                         Toggle("Up and Down", isOn: $viewModel.upAndDown)
@@ -93,8 +92,9 @@ struct EditHoleView: View {
                             .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
                             .keyboardType(.numberPad)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                        }
+                    }
                     .padding(.top, 7.0)
+                    
                 }
                 
                 VStack {

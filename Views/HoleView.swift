@@ -30,5 +30,5 @@ struct HoleView: View {
 }
 
 #Preview {
-    HoleView(index: 0, hole: Hole(id: UUID().uuidString, par: HoleConstants.par, yardage: HoleConstants.yardage, score: HoleConstants.score, club: HoleConstants.club, fairway: HoleConstants.fairway, missTee: HoleConstants.missTee, clubHit: HoleConstants.clubHit, gir: HoleConstants.gir, missApproach: HoleConstants.missApproach, upAndDown: HoleConstants.upAndDown, totalPutts: HoleConstants.totalPutts, firstPuttDist: HoleConstants.firstPuttDist, penaltyStrokes: HoleConstants.penaltyStrokes, shotsInside100: HoleConstants.shotsInside100), executeAction: {})
+    HoleView(index: 0, hole: Hole(id: UUID().uuidString, par: HoleConstants.par, yardage: HoleConstants.yardage, score: HoleConstants.score, teeClub: HoleConstants.teeClub, teeShot: HoleConstants.teeShot, approachClub: HoleConstants.approachClub, approachShot: HoleConstants.approachShot, upAndDown: HoleConstants.upAndDown, totalPutts: HoleConstants.totalPutts, firstPuttDist: HoleConstants.firstPuttDist, penaltyStrokes: HoleConstants.penaltyStrokes, shotsInside100: HoleConstants.shotsInside100), executeAction: {})
 }

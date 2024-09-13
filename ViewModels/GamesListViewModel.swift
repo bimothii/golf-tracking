@@ -80,7 +80,7 @@ class GamesListViewModel: ObservableObject {
                         print("No documents.")
                         return
                     }
-
+                
                     self.games = documents.compactMap { queryDocumentSnapshot -> Game? in
                         return try? queryDocumentSnapshot.data(as: Game.self)
                     }

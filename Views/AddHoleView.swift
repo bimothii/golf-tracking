@@ -1,135 +1,125 @@
-//
-//  NewHoleView.swift
-//  GolfApp
-//
-//  Created by Brian Kim on 6/17/24.
-//
-
 import SwiftUI
 
 struct AddHoleView: View {
-    @StateObject var viewModel:AddHoleViewModel
-    @Binding var showAddView:Bool
+    @StateObject var viewModel: AddHoleViewModel
+    @Binding var showAddView: Bool
     @FocusState private var isYardageFieldFocused: Bool
-    let game:Game
+    @FocusState private var isFirstPuttDistFocused: Bool
+    let game: Game
     
-    init (showAddView:Binding<Bool>, game:Game) {
+    init(showAddView: Binding<Bool>, game: Game) {
         self._viewModel = StateObject(wrappedValue: AddHoleViewModel())
         self.game = game
         self._showAddView = showAddView
     }
+    
     var body: some View {
-            Form {
-                Text("Add New Hole")
-                    .font(.system(size: 24))
-                    .fontWeight(.bold)
-                    .padding([.top, .trailing], 7.5)
-                Stepper("Par: \(viewModel.par)", value: $viewModel.par, in: 3...5)
-                HStack {
-                    Text("Yardage")
-                    Spacer()
-                    TextField("Enter Yardage", value: $viewModel.yardage, formatter: NumberFormatter())
-                        .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
-                        .focused($isYardageFieldFocused)
-                        .keyboardType(.numberPad)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                Stepper("Score: \(viewModel.score)", value: $viewModel.score, in: 1...12)
-                
-                VStack {
-                    Text("Tee Shot")
-                    
-                    Picker("Club", selection: $viewModel.club) {
-                        ForEach(HoleConstants.clubs, id: \.self) { club in
-                            Text(club).tag(club)
-                        }
-                    }
-                    .pickerStyle(MenuPickerStyle())
-                    
-                    Toggle("Fairway", isOn: $viewModel.fairway)
-                    Picker("Miss", selection: $viewModel.missTee) {
-                        Text("-").tag("-")
-                        Text("Left").tag("Left")
-                        Text("Right").tag("Right")
-                    }
-                    .pickerStyle(MenuPickerStyle())
-                }
+        // Use a ZStack to layer the background color
+        ZStack {
+            // Wrap everything in a ScrollView for better accessibility
+            ScrollView {
+                VStack(spacing: 20) {
+                    Text("Add New Hole")
+                        .font(.system(size: 24))
+                        .fontWeight(.bold)
+                        .padding([.top, .trailing], 7.5)
 
-                VStack {
-                    Text("Approach")
-                    
-                    Picker("Club Hit", selection: $viewModel.clubHit) {
-                        ForEach(HoleConstants.clubs, id: \.self) { club in
-                            Text(club).tag(club)
+                    // Par Selection Buttons
+                    HStack(spacing: 20) {
+                        ForEach(3...5, id: \.self) { par in
+                            Button(action: {
+                                if viewModel.par == par {
+                                    viewModel.par = HoleConstants.par
+                                } else {
+                                    viewModel.par = par
+                                }
+                            }) {
+                                Text("Par \(par)")
+                                    .padding()
+                                    .background(viewModel.par == par ? Color.purple : Color.gray)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                            .buttonStyle(BorderlessButtonStyle())
                         }
                     }
-                    .pickerStyle(MenuPickerStyle())
+                    .padding()
+
+                    CustomNumberInput(title: "Yardage", value: $viewModel.yardage, isFocused: $isYardageFieldFocused)
                     
-                    Toggle("Green in Regulation", isOn: $viewModel.gir)
+                    // Score Stepper
+                    CustomStepper(title: "Score", value: $viewModel.score, range: 0...100, step: 1)
                     
-                    Picker("Miss", selection: $viewModel.missApproach) {
-                        Text("-").tag("-")
-                        Text("Short Left").tag("Short Left")
-                        Text("Short").tag("Short")
-                        Text("Short Right").tag("Short Right")
-                        Text("Long Left").tag("Long Left")
-                        Text("Long").tag("Long")
-                        Text("Long Right").tag("Long Right")
+                    // Additional Sections Based on Conditions
+                    if viewModel.par != 3 {
+                        HStack {
+                            Text("Tee Club")
+                            Spacer()
+                            Picker("Tee Club", selection: $viewModel.teeClub) {
+                                ForEach(HoleConstants.clubs, id: \.self) { club in
+                                    Text(club).tag(club)
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                        }
+
+                        CustomSelect(title: "Tee Shot", value: $viewModel.teeShot, options: HoleConstants.teeShots)
                     }
-                    .pickerStyle(MenuPickerStyle())
-                }
-                if (!viewModel.gir) {
-                    VStack {
-                        Text("Short Game")
+                        
+                    CustomSelect(title: "Approach Club", value: $viewModel.approachClub, options: HoleConstants.clubs)
+
+                    ApproachShot(value: $viewModel.approachShot)
+                    
+                    // Short Game Section if Approach Shot is GIR
+                    if viewModel.approachShot == "GIR" {
                         Toggle("Up and Down", isOn: $viewModel.upAndDown)
                     }
-                }
-                
-                VStack {
-                    Text("Putts")
-                    Stepper("Total Putts: \(viewModel.totalPutts)", value: $viewModel.totalPutts, in: 0...8)
-                    HStack {
-                        Text("First Putt Distance")
-                        Spacer()
-                        TextField("Enter Putt Distance", value: $viewModel.firstPuttDist, formatter: NumberFormatter())
-                            .frame(width: /*@START_MENU_TOKEN@*/95.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/20.0/*@END_MENU_TOKEN@*/)
-                            .keyboardType(.numberPad)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    .padding(.top, 7.0)
-
-                }
-                
-                VStack {
-                    Stepper("Penalty Strokes: \(viewModel.penaltyStrokes)", value: $viewModel.penaltyStrokes, in: 0...10)
-                    Stepper("Shots Inside 100 Yards: \(viewModel.shotsInside100)", value: $viewModel.shotsInside100, in: 0...10)
-                }
                     
-
-                HStack {
-                    Spacer()
-                    CustomButton(title: "Add Hole", color: .purple) {
-                        viewModel.saveHole(game:game)
-                        showAddView = false
+                    CustomStepper(title: "Total Putts", value: $viewModel.totalPutts, range: -1...100, step: 1)
+                    
+                    CustomNumberInput(title: "First Putt Distance", value: $viewModel.firstPuttDist, isFocused: $isFirstPuttDistFocused)
+                    
+                    CustomStepper(title: "Penalty Strokes", value: $viewModel.penaltyStrokes, range: -1...100, step: 1)
+                    CustomStepper(title: "Shots Inside 100 Yards", value: $viewModel.shotsInside100, range: -1...100, step: 1)
+                    
+                    // Save and Cancel Buttons
+                    HStack {
+                        Spacer()
+                        CustomButton(title: "Add Hole", color: .purple) {
+                            viewModel.saveHole(game: game)
+                            showAddView = false
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                
-                HStack {
-                    Spacer()
-                    Button {
-                        showAddView = false
-                    } label: {
-                        Text("Cancel")
-                            .foregroundColor(.red)
+                    
+                    HStack {
+                        Spacer()
+                        Button {
+                            showAddView = false
+                        } label: {
+                            Text("Cancel")
+                                .foregroundColor(.red)
+                        }
+                        Spacer()
                     }
-
-                    Spacer()
                 }
+                .padding(20) // Add padding around the VStack
+                .background(Color(uiColor: UIColor { traitCollection in
+                    traitCollection.userInterfaceStyle == .dark ? UIColor(white:0.1, alpha: 1) : UIColor(white: 0.9, alpha: 1)
+                }))
             }
+            .onTapGesture {
+                // Resign the focus when tapping outside the TextField
+                isYardageFieldFocused = false
+                isFirstPuttDistFocused = false
+            }
+            .padding(10)
+            .cornerRadius(50)
+            
         }
+    }
 }
 
 #Preview {
-    AddHoleView(showAddView: Binding(get: {return true}, set: {_ in}), game:Game(id: UUID().uuidString, title: "Game 1", createdDate: Date().timeIntervalSince1970, gameDate: Date().timeIntervalSince1970))
+    AddHoleView(showAddView: Binding(get: { true }, set: { _ in }), game: Game(id: UUID().uuidString, title: "Game 1", createdDate: Date().timeIntervalSince1970, gameDate: Date().timeIntervalSince1970))
 }

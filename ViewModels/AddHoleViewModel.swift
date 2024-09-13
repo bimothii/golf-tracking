@@ -14,13 +14,11 @@ class AddHoleViewModel:ObservableObject {
     @Published var yardage: Int = HoleConstants.yardage
     @Published var score: Int = HoleConstants.score
     
-    @Published var club: String = HoleConstants.club
-    @Published var fairway: Bool = HoleConstants.fairway
-    @Published var missTee: String = HoleConstants.missTee
+    @Published var teeClub: String = HoleConstants.teeClub
+    @Published var teeShot: String = HoleConstants.teeShot
     
-    @Published var clubHit: String = HoleConstants.clubHit
-    @Published var gir: Bool = HoleConstants.gir
-    @Published var missApproach: String = HoleConstants.missApproach
+    @Published var approachClub: String = HoleConstants.approachClub
+    @Published var approachShot: String = HoleConstants.approachShot
     
     @Published var upAndDown: Bool = HoleConstants.upAndDown
     
@@ -33,7 +31,7 @@ class AddHoleViewModel:ObservableObject {
     
     func saveHole(game:Game) {
         var gameCopy = game
-        gameCopy.holes.append(Hole(id: UUID().uuidString, par: par, yardage: yardage, score: score, club: club, fairway: fairway, missTee: missTee, clubHit: clubHit, gir: gir, missApproach: missApproach, upAndDown: upAndDown, totalPutts: totalPutts, firstPuttDist: firstPuttDist, penaltyStrokes: penaltyStrokes, shotsInside100: shotsInside100))
+        gameCopy.holes.append(Hole(id: UUID().uuidString, par: par, yardage: yardage, score: score, teeClub: teeClub, teeShot: teeShot, approachClub: approachClub, approachShot: approachShot, upAndDown: upAndDown, totalPutts: totalPutts, firstPuttDist: firstPuttDist, penaltyStrokes: penaltyStrokes, shotsInside100: shotsInside100))
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         let db = Firestore.firestore()
